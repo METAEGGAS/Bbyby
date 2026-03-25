@@ -1,0 +1,156 @@
+<!doctype html><html lang="ar" dir="rtl"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>لوحة تحكم الأكواد</title><style>:root{--bg:#050807;--g:#2ef08b;--fg:#fff;--m:#9aa}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial;background:radial-gradient(120% 90% at 50% 0,#09130e 0,#050807 55%,#040504 100%);color:var(--fg)}.w{max-width:820px;margin:0 auto;min-height:100vh;padding:16px}.hero{height:170px;border-radius:18px;background:url("https://www.maltexma.com/static/images/lexon/full_header_bg.png") top center/contain no-repeat;filter:saturate(1.05);margin:6px 0 12px}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}@media(max-width:860px){.grid{grid-template-columns:1fr}}.p{position:relative;padding:14px;border-radius:22px;background:linear-gradient(180deg,#050a07,#040604);border:2px solid rgba(46,240,139,.55);box-shadow:0 0 18px rgba(46,240,139,.18),inset 0 0 0 1px rgba(46,240,139,.12)}h1{margin:0 0 6px;font-size:18px}small{color:#cfeee0;opacity:.85}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.in{width:100%;height:52px;border-radius:14px;border:0;outline:0;background:#2a2d2c;color:#e9ecea;padding:0 14px;font-size:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}.in::placeholder{color:var(--m)}.btn{height:52px;border:0;border-radius:14px;color:#fff;font-weight:1000;background:linear-gradient(180deg,#39e07d,#24c96b);box-shadow:0 12px 26px rgba(0,0,0,.35),0 0 18px rgba(46,240,139,.16);cursor:pointer}.btn2{height:52px;border-radius:14px;font-weight:1000;font-size:13px;background:rgba(46,240,139,.12);border:1px solid rgba(46,240,139,.35);color:#dfffee;cursor:pointer}.sep{height:1px;background:rgba(46,240,139,.18);margin:12px 0}.mut{color:#b8c2bd;font-size:12px;line-height:1.5;margin:6px 0 0}.k{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;color:#eafff4}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}@media(max-width:700px){.cards{grid-template-columns:1fr}}.card{border-radius:16px;border:1px solid rgba(46,240,139,.25);background:rgba(8,16,12,.55);padding:12px}.card b{display:block;font-size:12px;color:#bfffdc}.card div{font-size:18px;font-weight:1000;margin-top:4px}.tbl{width:100%;border-collapse:collapse;font-size:12px}.tbl th,.tbl td{padding:8px 6px;border-bottom:1px solid rgba(46,240,139,.12);text-align:right;vertical-align:top}.tag{display:inline-block;padding:3px 8px;border-radius:999px;border:1px solid rgba(46,240,139,.25);background:rgba(46,240,139,.10);font-size:11px}.bad{border-color:rgba(255,120,120,.35);background:rgba(255,120,120,.08)}.ok{border-color:rgba(120,255,190,.35);background:rgba(120,255,190,.08)}.toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(8,16,12,.92);border:1px solid rgba(46,240,139,.35);box-shadow:0 10px 28px rgba(0,0,0,.45),0 0 16px rgba(46,240,139,.12);color:#fff;padding:10px 14px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1}</style>
+<body><div class="w">
+  <div class="hero"></div>
+
+  <div class="grid">
+    <div class="p">
+      <h1>لوحة تحكم الأكواد</h1>
+      <small>قاعدة البيانات (Firestore): <span class="k">codsaer/meta/codes</span></small>
+
+      <div class="sep"></div>
+
+      <div class="cards">
+        <div class="card"><b>إجمالي آخر 50 كود</b><div id="s_total">—</div></div>
+        <div class="card"><b>متاح</b><div id="s_avail">—</div></div>
+        <div class="card"><b>منتهي/مستخدم بالكامل</b><div id="s_done">—</div></div>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="row">
+        <input id="acode" class="in" style="flex:1" placeholder="الكود (سيُولد تلقائيًا لو فاضي)">
+        <button id="gen" class="btn2" style="width:150px">توليد كود</button>
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <input id="amt" class="in" style="flex:1" inputmode="decimal" placeholder="المبلغ">
+        <input id="cur" class="in" style="width:140px" value="جنيه" placeholder="العملة">
+        <input id="exp" class="in" style="flex:1" type="datetime-local">
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <input id="maxUses" class="in" style="flex:1" inputmode="numeric" placeholder="عدد الاستخدامات الإجمالي (maxUses)">
+        <input id="maxPer" class="in" style="flex:1" inputmode="numeric" placeholder="استخدامات لكل شخص (maxUsesPerUser)">
+      </div>
+
+      <div class="row" style="margin-top:10px">
+        <button id="add" class="btn" style="flex:1">حفظ الكود</button>
+        <button id="refresh" class="btn2" style="width:150px">تحديث</button>
+      </div>
+
+      <div class="sep"></div>
+
+      <div class="row">
+        <input id="prefix" class="in" style="flex:1" placeholder="Prefix (مثال: MTX-)">
+        <input id="count" class="in" style="width:160px" inputmode="numeric" placeholder="عدد الأكواد">
+        <button id="batch" class="btn2" style="width:160px">توليد دفعة</button>
+      </div>
+
+      <p class="mut">الحدود: <span class="k">maxUses</span> إجمالي استخدامات للكود، و <span class="k">maxUsesPerUser</span> لكل مستخدم. التتبع داخل: <span class="k">codes/{code}/uses/{uid}</span></p>
+    </div>
+
+    <div class="p">
+      <div class="row" style="justify-content:space-between">
+        <div><b style="font-size:16px">آخر الأكواد</b><div class="mut">عرض آخر 50 (الأحدث)</div></div>
+      </div>
+      <div class="sep"></div>
+      <div style="overflow:auto;max-height:540px">
+        <table class="tbl">
+          <thead><tr><th>الكود</th><th>القيمة</th><th>الصلاحية</th><th>الاستخدام</th></tr></thead>
+          <tbody id="list"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div><div id="t" class="toast">تم</div>
+
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import{getFirestore,doc,getDoc,setDoc,collection,query,orderBy,limit,getDocs,Timestamp,serverTimestamp}from"https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+const firebaseConfig={apiKey:"AIzaSyBOUqLixfphg3b8hajc4hkwV-VJmldGBVw",authDomain:"randers-c640b.firebaseapp.com",projectId:"randers-c640b",storageBucket:"randers-c640b.firebasestorage.app",messagingSenderId:"391496092929",appId:"1:391496092929:web:58208b4eb3e6f9a8571f00",measurementId:"G-DBDSVVF7PS"};
+const app=initializeApp(firebaseConfig),db=getFirestore(app);
+const $=id=>document.getElementById(id),toast=m=>{const t=$("t");t.textContent=m;t.classList.add("show");clearTimeout(t._x);t._x=setTimeout(()=>t.classList.remove("show"),1600)};
+const ROOT="codsaer",META="meta",CODES="codes",metaRef=doc(db,ROOT,META);
+const dt=v=>{if(!v)return null;const d=new Date(v);return isNaN(d)?null:Timestamp.fromDate(d)};
+const rid=(n=10)=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<n;i++)s+=a[(Math.random()*a.length)|0];return s};
+const n1=x=>{x=parseInt(x,10);return isFinite(x)&&x>0?x:1};
+
+async function ensure(){const s=await getDoc(metaRef);if(!s.exists())await setDoc(metaRef,{createdAt:serverTimestamp(),note:"auto-created"},{merge:true})}
+
+async function saveCode(code,amount,currency,expiresAt,maxUses,maxUsesPerUser){
+ await ensure(); if(!code)code=rid(10);
+ const ref=doc(db,ROOT,META,CODES,code);
+ const payload={code,amount,currency,expiresAt,maxUses,maxUsesPerUser,usedCount:0,used:false,createdAt:serverTimestamp(),updatedAt:serverTimestamp()};
+ // merge=true يسمح بتعديل خصائص بدون مسح usedCount لو حبيت لاحقًا (هنا بنحافظ عليه إن وجد)
+ await setDoc(ref,{...payload},{merge:true});
+ return code;
+}
+
+async function load(){
+ await ensure();
+ const qy=query(collection(db,ROOT,META,CODES),orderBy("createdAt","desc"),limit(50));
+ const snap=await getDocs(qy),tb=$("list");tb.innerHTML="";
+ let total=0,avail=0,done=0;
+ snap.forEach(d=>{
+  total++;
+  const x=d.data();
+  const ex=x.expiresAt?.toDate?x.expiresAt.toDate():null;
+  const expMs=ex?ex.getTime():0,expired=expMs&&expMs<Date.now();
+  const maxUses=Math.max(1,Number(x.maxUses||1));
+  const usedCount=Number(x.usedCount||0);
+  const full=usedCount>=maxUses;
+  const ok=(!expired&&!full);
+  ok?avail++:done++;
+  const st= ok?`<span class="tag ok">متاح</span>`:(expired?`<span class="tag bad">منتهي</span>`:`<span class="tag bad">مكتمل</span>`);
+  tb.innerHTML+=`<tr>
+    <td class="k">${d.id}<div style="margin-top:6px">${st}</div></td>
+    <td>${Number(x.amount||0)} ${x.currency||""}<div class="mut">perUser: ${Math.max(1,Number(x.maxUsesPerUser||1))}</div></td>
+    <td>${ex?ex.toLocaleString("ar-EG"):"-"}</td>
+    <td><span class="k">${usedCount}</span> / <span class="k">${maxUses}</span></td>
+  </tr>`;
+ });
+ $("s_total").textContent=total;
+ $("s_avail").textContent=avail;
+ $("s_done").textContent=done;
+}
+
+$("gen").onclick=()=>{$("acode").value=rid(10);toast("اتولّد كود")};
+
+$("add").onclick=async()=>{
+ try{
+  const c=$("acode").value.trim();
+  const amt=parseFloat(($("amt").value||"").trim());
+  const cur=($("cur").value||"جنيه").trim()||"جنيه";
+  const exp=dt($("exp").value);
+  const maxUses=n1(($("maxUses").value||"").trim());
+  const maxPer=n1(($("maxPer").value||"").trim());
+  if(!(amt>0))return toast("اكتب مبلغ صحيح");
+  if(!exp)return toast("حدد تاريخ صلاحية");
+  const saved=await saveCode(c,amt,cur,exp,maxUses,maxPer);
+  $("acode").value=saved;
+  toast("تم حفظ الكود");
+  load();
+ }catch(e){toast("خطأ: "+(e.code||e))}
+};
+
+$("batch").onclick=async()=>{
+ try{
+  const p=($("prefix").value||"").trim();
+  const cnt=parseInt(($("count").value||"").trim(),10);
+  const amt=parseFloat(($("amt").value||"").trim());
+  const cur=($("cur").value||"جنيه").trim()||"جنيه";
+  const exp=dt($("exp").value);
+  const maxUses=n1(($("maxUses").value||"").trim());
+  const maxPer=n1(($("maxPer").value||"").trim());
+  if(!(cnt>0&&cnt<=300))return toast("عدد من 1 لـ 300");
+  if(!(amt>0))return toast("اكتب مبلغ صحيح");
+  if(!exp)return toast("حدد تاريخ صلاحية");
+  for(let i=0;i<cnt;i++)await saveCode(p+rid(10),amt,cur,exp,maxUses,maxPer);
+  toast("تم توليد الدفعة");
+  load();
+ }catch(e){toast("خطأ: "+(e.code||e))}
+};
+
+$("refresh").onclick=load;load();
+</script>
+</body></html>
