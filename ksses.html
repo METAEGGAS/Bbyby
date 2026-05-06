@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>سياسة الخصوصية | Trade App</title>
+<meta name="theme-color" content="#12081f">
+<style>
+:root{--p:#12081f;--p2:#1a0f2b;--p3:#1d1231;--p4:#24153b;--b:#372255;--t:#f5f3ff;--m:#c4b5fd;--m2:#b7a9d6;--r:18px}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--p);font:13px/1.9 Tahoma,Arial,sans-serif;color:var(--t);overflow-x:hidden}
+a{text-decoration:none;color:inherit}button{font:inherit;border:0;cursor:pointer}svg{display:block}
+.pg{min-height:100vh;background:linear-gradient(180deg,var(--p2),var(--p));padding:10px 10px 92px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}
+.bk,.sp{width:40px;height:40px}
+.bk{border-radius:14px;background:#231438;border:2px solid #4b2e75;display:grid;place-items:center;color:#fff;box-shadow:0 6px 14px rgba(0,0,0,.24)}
+.ttl{flex:1;text-align:center;font-size:17px;font-weight:900}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#2a1845,#1a102d 60%,#291746);border:2px solid #6b44a9;border-radius:22px;padding:18px 18px 16px;margin-bottom:14px;box-shadow:0 10px 24px rgba(0,0,0,.28),0 0 0 1px #8b5cf644 inset}
+.hero:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 12% 18%,rgba(255,255,255,.95) 0 1px,transparent 2px),
+radial-gradient(circle at 22% 70%,rgba(196,181,253,.9) 0 1.2px,transparent 2.2px),
+radial-gradient(circle at 36% 28%,rgba(255,255,255,.8) 0 1px,transparent 2px),
+radial-gradient(circle at 48% 82%,rgba(255,255,255,.9) 0 1.2px,transparent 2.2px),
+radial-gradient(circle at 62% 16%,rgba(196,181,253,.95) 0 1.2px,transparent 2.2px),
+radial-gradient(circle at 74% 64%,rgba(255,255,255,.9) 0 1px,transparent 2px),
+radial-gradient(circle at 88% 24%,rgba(255,255,255,.88) 0 1.2px,transparent 2.2px),
+radial-gradient(circle at 92% 78%,rgba(196,181,253,.85) 0 1px,transparent 2px);opacity:.5}
+.hero>*{position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:7px;background:#2b1847;border:1px solid #5c3b90;color:#efe8ff;padding:7px 12px;border-radius:999px;font-size:11px;font-weight:900;margin-bottom:10px}
+.hero h1{margin:0 0 8px;font-size:22px;line-height:1.4}
+.hero p{margin:0;color:#ddd2fb;font-size:12px}
+.card{background:linear-gradient(180deg,#24153b,#1a102c);border:1px solid #4b2f72;border-radius:var(--r);padding:16px 15px;margin-bottom:12px;box-shadow:0 10px 22px rgba(0,0,0,.22)}
+.card h2{margin:0 0 10px;font-size:15px;color:#fff;font-weight:900}
+.card p{margin:0 0 10px;color:#efe9ff}
+.card p:last-child{margin-bottom:0}
+.list{margin:0;padding:0;list-style:none}
+.list li{position:relative;padding:0 18px 0 0;margin:0 0 8px;color:#efe9ff}
+.list li:last-child{margin-bottom:0}
+.list li:before{content:"";position:absolute;right:0;top:11px;width:8px;height:8px;border-radius:50%;background:linear-gradient(180deg,#a78bfa,#7c3aed)}
+.notice{background:linear-gradient(180deg,#2a1845,#1c102f);border:2px solid #5c3b90;border-radius:18px;padding:14px 15px;color:#f6f2ff;margin-bottom:12px}
+.notice b{display:block;font-size:14px;margin-bottom:5px}
+.footer-note{color:#cfc2f4;font-size:12px;text-align:center;padding:6px 4px 0}
+.nav{position:fixed;right:0;left:0;bottom:0;width:100%;background:#170d27;border-top:1px solid #3a245b;padding:7px 3px 8px;display:flex;justify-content:space-around;z-index:9}
+.ni{text-align:center;color:#b7a9d6;font-size:11px;cursor:pointer}
+.ni b{display:grid;place-items:center;width:30px;height:30px;margin:0 auto 4px;border-radius:11px;background:#231438;border:1px solid #3f275f}
+.ni svg{width:18px;height:18px}
+.ni.on{color:#fff}
+.ni.on b{background:linear-gradient(180deg,#8b5cf6,#5b21b6);border-color:#8f69d5}
+</style>
+</head>
+<body>
+<div class="pg">
+  <div class="top">
+    <button class="bk" id="backBtn" aria-label="رجوع">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"></path></svg>
+    </button>
+    <div class="ttl">سياسة الخصوصية</div>
+    <div class="sp"></div>
+  </div>
+
+  <div class="hero">
+    <div class="badge">🔒 حماية البيانات والخصوصية</div>
+    <h1>سياسة الخصوصية</h1>
+    <p>نحن نلتزم بحماية خصوصية المستخدمين والزوار، ونعمل على توفير بيئة آمنة وموثوقة تضمن الحفاظ على سرية المعلومات والبيانات الشخصية.</p>
+  </div>
+
+  <div class="card">
+    <h2>مقدمة</h2>
+    <p>مرحبًا بك في منصتنا. نحن نلتزم بحماية خصوصية جميع المستخدمين والزوار، ونعمل على توفير بيئة آمنة وموثوقة تضمن الحفاظ على سرية المعلومات والبيانات الشخصية. توضح سياسة الخصوصية هذه كيفية جمع البيانات واستخدامها وتخزينها وحمايتها عند استخدامك لموقعنا أو تطبيقنا أو أي خدمة تابعة لنا.</p>
+    <p>إن استخدامك للخدمة أو تسجيل حساب أو الاستمرار في تصفح المنصة يعني موافقتك الكاملة على جميع البنود والشروط المذكورة في هذه السياسة. إذا كنت لا توافق على أي جزء من هذه السياسة، يرجى التوقف عن استخدام الخدمة فورًا.</p>
+  </div>
+
+  <div class="card">
+    <h2>التعريفات</h2>
+    <ul class="list">
+      <li>“المنصة” تشير إلى الموقع الإلكتروني أو التطبيق أو جميع الخدمات التابعة لنا.</li>
+      <li>“المستخدم” يشير إلى أي شخص يقوم باستخدام المنصة أو التسجيل فيها.</li>
+      <li>“البيانات الشخصية” تشير إلى أي معلومات يمكن استخدامها لتحديد هوية المستخدم بشكل مباشر أو غير مباشر.</li>
+      <li>“الخدمة” تشير إلى جميع الميزات والوظائف والمحتوى الذي نقدمه.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>المعلومات التي نقوم بجمعها</h2>
+    <p>قد نقوم بجمع أنواع متعددة من المعلومات بهدف تشغيل الخدمة وتحسينها وحمايتها، وتشمل هذه المعلومات على سبيل المثال لا الحصر:</p>
+  </div>
+
+  <div class="card">
+    <h2>أولًا: المعلومات الشخصية</h2>
+    <p>قد يطلب منك تقديم بعض البيانات الشخصية أثناء التسجيل أو استخدام الخدمات، مثل:</p>
+    <ul class="list">
+      <li>الاسم الكامل</li>
+      <li>اسم المستخدم</li>
+      <li>البريد الإلكتروني</li>
+      <li>رقم الهاتف</li>
+      <li>الدولة أو المدينة</li>
+      <li>صورة الملف الشخصي</li>
+      <li>بيانات الدفع أو المحافظ الرقمية</li>
+      <li>معلومات الحساب البنكي عند الحاجة</li>
+      <li>تاريخ الميلاد</li>
+      <li>معلومات الهوية عند التحقق</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ثانيًا: المعلومات التقنية</h2>
+    <p>عند استخدام المنصة، قد يتم جمع معلومات تقنية تلقائيًا، مثل:</p>
+    <ul class="list">
+      <li>عنوان IP</li>
+      <li>نوع الجهاز</li>
+      <li>نظام التشغيل</li>
+      <li>نوع المتصفح</li>
+      <li>سرعة الاتصال</li>
+      <li>الصفحات التي تمت زيارتها</li>
+      <li>مدة الاستخدام</li>
+      <li>وقت الدخول والخروج</li>
+      <li>سجل الأخطاء والمشاكل التقنية</li>
+      <li>معرفات الأجهزة</li>
+      <li>ملفات تعريف الارتباط Cookies</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ثالثًا: معلومات النشاط والاستخدام</h2>
+    <p>قد نقوم بجمع معلومات متعلقة بطريقة استخدامك للخدمة، مثل:</p>
+    <ul class="list">
+      <li>عمليات تسجيل الدخول</li>
+      <li>التحويلات والإيداعات والسحوبات</li>
+      <li>سجل الطلبات</li>
+      <li>الرسائل والإشعارات</li>
+      <li>تفاعلك مع الميزات المختلفة</li>
+      <li>البلاغات والشكاوى</li>
+      <li>عمليات البحث داخل المنصة</li>
+      <li>تفضيلات المستخدم والإعدادات</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>كيفية استخدام المعلومات</h2>
+    <p>نستخدم المعلومات التي يتم جمعها لأغراض متعددة تشمل:</p>
+    <ul class="list">
+      <li>تشغيل الخدمات</li>
+      <li>إنشاء الحسابات وإدارتها</li>
+      <li>توفير الميزات الأساسية</li>
+      <li>معالجة المدفوعات والتحويلات</li>
+      <li>التحقق من العمليات المالية</li>
+      <li>تخصيص تجربة المستخدم</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>الحماية والأمان</h2>
+    <ul class="list">
+      <li>اكتشاف الأنشطة المشبوهة</li>
+      <li>منع الاحتيال والاختراق</li>
+      <li>حماية الحسابات والبيانات</li>
+      <li>مراقبة محاولات الوصول غير المصرح بها</li>
+      <li>التحقق من الهوية</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>تحسين الخدمات</h2>
+    <ul class="list">
+      <li>تطوير ميزات جديدة</li>
+      <li>تحليل أداء المنصة</li>
+      <li>فهم احتياجات المستخدمين</li>
+      <li>تحسين سرعة وكفاءة النظام</li>
+      <li>إصلاح الأخطاء التقنية</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>التواصل مع المستخدمين</h2>
+    <ul class="list">
+      <li>إرسال الإشعارات والتنبيهات</li>
+      <li>الرد على الاستفسارات</li>
+      <li>إرسال التحديثات المهمة</li>
+      <li>التواصل بشأن المشكلات أو المخالفات</li>
+      <li>تقديم الدعم الفني</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>الأغراض القانونية</h2>
+    <ul class="list">
+      <li>الامتثال للقوانين والأنظمة</li>
+      <li>التعاون مع الجهات الرسمية</li>
+      <li>تنفيذ الأحكام القانونية</li>
+      <li>حماية الحقوق القانونية للمنصة</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ملفات تعريف الارتباط Cookies</h2>
+    <p>تستخدم المنصة ملفات تعريف الارتباط لتحسين الأداء وتجربة المستخدم. تساعد هذه الملفات في:</p>
+    <ul class="list">
+      <li>حفظ تسجيل الدخول</li>
+      <li>تذكر الإعدادات والتفضيلات</li>
+      <li>تحليل الاستخدام</li>
+      <li>حماية الحسابات</li>
+      <li>تحسين سرعة التصفح</li>
+    </ul>
+    <p>يمكن للمستخدم تعطيل ملفات تعريف الارتباط من إعدادات المتصفح، لكن بعض الميزات قد لا تعمل بشكل صحيح بعد التعطيل.</p>
+  </div>
+
+  <div class="card">
+    <h2>مشاركة المعلومات مع الأطراف الثالثة</h2>
+    <p>نحن لا نقوم ببيع بيانات المستخدمين لأي جهة خارجية، ولكن قد تتم مشاركة بعض البيانات في الحالات التالية:</p>
+  </div>
+
+  <div class="card">
+    <h2>مزودو الخدمات</h2>
+    <p>قد نتعاون مع شركات أو مزودي خدمات يساعدوننا في تشغيل المنصة مثل:</p>
+    <ul class="list">
+      <li>خدمات الاستضافة</li>
+      <li>خدمات الدفع</li>
+      <li>أنظمة الحماية</li>
+      <li>التحليلات والإحصائيات</li>
+      <li>خدمات البريد الإلكتروني</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>المتطلبات القانونية</h2>
+    <p>قد نقوم بالكشف عن المعلومات إذا كان ذلك مطلوبًا بموجب:</p>
+    <ul class="list">
+      <li>أمر قضائي</li>
+      <li>طلب رسمي من الجهات المختصة</li>
+      <li>تحقيق قانوني</li>
+      <li>حماية الحقوق القانونية</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>الحماية ومنع الاحتيال</h2>
+    <p>قد تتم مشاركة المعلومات لمنع:</p>
+    <ul class="list">
+      <li>الاختراقات</li>
+      <li>غسل الأموال</li>
+      <li>الاحتيال المالي</li>
+      <li>إساءة استخدام الخدمة</li>
+      <li>الأنشطة غير القانونية</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>تخزين البيانات وحمايتها</h2>
+    <p>نستخدم أنظمة حماية متقدمة للحفاظ على أمان البيانات، وتتضمن إجراءات الحماية:</p>
+    <ul class="list">
+      <li>تشفير البيانات</li>
+      <li>جدران حماية</li>
+      <li>مراقبة أمنية مستمرة</li>
+      <li>تقييد الوصول للبيانات</li>
+      <li>أنظمة كشف الاختراق</li>
+      <li>النسخ الاحتياطي الدوري</li>
+    </ul>
+    <p>ورغم اتخاذ جميع التدابير الممكنة، لا يمكن ضمان الحماية المطلقة لأي نظام إلكتروني أو اتصال عبر الإنترنت.</p>
+  </div>
+
+  <div class="card">
+    <h2>الاحتفاظ بالبيانات</h2>
+    <p>نحتفظ بالمعلومات الشخصية للفترة اللازمة لتحقيق الأغراض المذكورة في هذه السياسة، أو حسب ما تتطلبه القوانين المعمول بها.</p>
+    <p>قد نحتفظ ببعض السجلات حتى بعد حذف الحساب لأغراض:</p>
+    <ul class="list">
+      <li>الامتثال القانوني</li>
+      <li>حل النزاعات</li>
+      <li>منع الاحتيال</li>
+      <li>تنفيذ الاتفاقيات</li>
+      <li>الأغراض الأمنية</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>حقوق المستخدم</h2>
+    <p>يحق للمستخدم، وفقًا للقوانين المعمول بها:</p>
+    <ul class="list">
+      <li>الوصول إلى بياناته الشخصية</li>
+      <li>طلب تعديل المعلومات</li>
+      <li>طلب حذف الحساب</li>
+      <li>الاعتراض على بعض أنواع المعالجة</li>
+      <li>طلب نسخة من البيانات</li>
+      <li>سحب الموافقة في بعض الحالات</li>
+    </ul>
+    <p>قد نطلب التحقق من الهوية قبل تنفيذ أي طلب يتعلق بالبيانات.</p>
+  </div>
+
+  <div class="card">
+    <h2>مسؤولية المستخدم</h2>
+    <p>يتحمل المستخدم مسؤولية:</p>
+    <ul class="list">
+      <li>الحفاظ على سرية بيانات تسجيل الدخول</li>
+      <li>عدم مشاركة الحساب مع الآخرين</li>
+      <li>تقديم معلومات صحيحة ودقيقة</li>
+      <li>تحديث البيانات عند الحاجة</li>
+      <li>استخدام المنصة بشكل قانوني</li>
+    </ul>
+    <p>ولا تتحمل المنصة أي مسؤولية عن الخسائر الناتجة عن إهمال المستخدم أو مشاركة بياناته مع أطراف أخرى.</p>
+  </div>
+
+  <div class="card">
+    <h2>حماية الأطفال</h2>
+    <p>الخدمة غير موجهة للأطفال دون السن القانوني، ولا نقوم بجمع معلومات شخصية منهم بشكل متعمد. إذا تبين لنا أنه تم جمع بيانات لطفل دون موافقة قانونية، سيتم حذفها فورًا.</p>
+  </div>
+
+  <div class="card">
+    <h2>الروابط الخارجية</h2>
+    <p>قد تحتوي المنصة على روابط لمواقع أو خدمات خارجية لا نتحكم بها. لسنا مسؤولين عن محتوى أو سياسات الخصوصية الخاصة بتلك الجهات، ويجب على المستخدم مراجعة سياساتهم قبل استخدام خدماتهم.</p>
+  </div>
+
+  <div class="card">
+    <h2>التحويلات الدولية للبيانات</h2>
+    <p>قد يتم نقل البيانات أو تخزينها على خوادم موجودة خارج دولة المستخدم. باستخدامك للخدمة فإنك توافق على نقل بياناتك ومعالجتها وفقًا لهذه السياسة.</p>
+  </div>
+
+  <div class="card">
+    <h2>الإشعارات والرسائل</h2>
+    <p>قد نقوم بإرسال رسائل تتعلق بـ:</p>
+    <ul class="list">
+      <li>أمان الحساب</li>
+      <li>تحديثات النظام</li>
+      <li>العروض والخدمات</li>
+      <li>التنبيهات المهمة</li>
+      <li>العمليات المالية</li>
+    </ul>
+    <p>ويمكن للمستخدم إيقاف بعض أنواع الرسائل غير الضرورية من خلال إعدادات الحساب.</p>
+  </div>
+
+  <div class="card">
+    <h2>إخلاء المسؤولية</h2>
+    <p>نحن نبذل جهدًا كبيرًا لحماية المعلومات وضمان استقرار الخدمة، لكننا لا نضمن:</p>
+    <ul class="list">
+      <li>خلو الخدمة من الأخطاء</li>
+      <li>عدم حدوث انقطاع</li>
+      <li>عدم تعرض الأنظمة للاختراق</li>
+      <li>الحماية الكاملة من الهجمات الإلكترونية</li>
+    </ul>
+    <p>ويستخدم المستخدم الخدمة على مسؤوليته الخاصة.</p>
+  </div>
+
+  <div class="card">
+    <h2>التعديلات على سياسة الخصوصية</h2>
+    <p>نحتفظ بحق تعديل أو تحديث سياسة الخصوصية في أي وقت دون إشعار مسبق. يتم نشر التعديلات داخل المنصة، ويعتبر استمرار استخدام الخدمة موافقة على النسخة الجديدة.</p>
+  </div>
+
+  <div class="card">
+    <h2>الموافقة على السياسة</h2>
+    <p>باستخدامك للمنصة، فإنك تؤكد أنك:</p>
+    <ul class="list">
+      <li>قرأت سياسة الخصوصية بالكامل</li>
+      <li>فهمت جميع البنود المذكورة</li>
+      <li>توافق على جمع واستخدام البيانات</li>
+      <li>توافق على معالجة المعلومات وفقًا لهذه السياسة</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>التواصل معنا</h2>
+    <p>إذا كان لديك أي سؤال أو استفسار أو طلب متعلق بالخصوصية أو البيانات الشخصية، يمكنك التواصل معنا عبر وسائل الاتصال الرسمية الخاصة بالمنصة، وسنعمل على الرد في أقرب وقت ممكن.</p>
+  </div>
+
+  <div class="card">
+    <h2>أحكام إضافية</h2>
+    <p>تحتفظ المنصة بحق تعليق أو إيقاف أي حساب يخالف القوانين أو الشروط أو يحاول استغلال الثغرات أو إساءة استخدام الخدمات.</p>
+    <p>كما يحق للمنصة التحقيق في أي نشاط مشبوه واتخاذ الإجراءات المناسبة بما في ذلك تجميد الحساب أو حظر الوصول أو التعاون مع الجهات القانونية المختصة.</p>
+    <p>ويتعهد المستخدم بعدم استخدام المنصة في أي نشاط غير قانوني أو ضار أو مخالف للأنظمة المحلية أو الدولية.</p>
+  </div>
+
+  <div class="notice">
+    <b>خاتمة</b>
+    إن خصوصية المستخدم وأمان بياناته من أهم أولوياتنا، ونعمل باستمرار على تطوير أنظمة الحماية وتحسين سياساتنا لضمان أفضل مستوى ممكن من الأمان والثقة. باستخدامك للمنصة، فإنك تمنحنا الثقة للتعامل مع بياناتك بمسؤولية وشفافية وفقًا لما هو موضح في هذه السياسة.
+  </div>
+
+  <div class="footer-note">جميع الحقوق والسياسات محفوظة داخل المنصة.</div>
+</div>
+
+<div class="nav">
+  <div class="ni" id="home"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"></path><path d="M5 10.5V20h14v-9.5"></path><path d="M9 20v-5h6v5"></path></svg></b>الرئيسية</div>
+  <div class="ni" id="markets"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16 9 11l3 3 7-7"></path><path d="M20 7v5h-5"></path></svg></b>الأسواق</div>
+  <div class="ni" id="trade"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 7h10v4M17 17H7v-4"></path><path d="m14 4 3 3-3 3M10 20l-3-3 3-3"></path></svg></b>التداول</div>
+  <div class="ni" id="contracts"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="16" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg></b>العقود</div>
+  <div class="ni on" id="assets"><b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v10H4z"></path><path d="M7 12h10"></path><path d="M9 9h2M9 15h2"></path></svg></b>الأصول</div>
+</div>
+
+<script>
+document.getElementById("backBtn").onclick=()=>history.back();
+document.getElementById("home").onclick=()=>location="home.html";
+document.getElementById("markets").onclick=()=>location="traders.html";
+document.getElementById("trade").onclick=()=>location="tradee.html";
+document.getElementById("contracts").onclick=()=>location="akedd.html";
+document.getElementById("assets").onclick=()=>location="assets.html";
+</script>
+</body>
+</html>
